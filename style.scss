@@ -10,11 +10,13 @@
   --lead_desktop: 32px;
   --p1_desktop: 18px;
   --p1_desktop_strong: 16px;
+  --h3_desktop: 24px;
 
   --h1_desktop_lineHeight: 122%;
   --lead_desktop_lineHeight: 126%;
   --p1_desktop_lineHeight: 112%;
   --p1_desktop_strong_lineHeight: 126%;
+  --h3_desktop_lineHeight: 132%;
 }
 
 @mixin button {
@@ -60,6 +62,7 @@
 
 html {
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 body {
@@ -190,6 +193,7 @@ main {
   gap: 50px;
   max-width: 936px;
   margin-left: 12px;
+  margin-bottom: 190px;
 
   &__header {
     font-family: 'Montserrat';
@@ -213,4 +217,112 @@ main {
       white-space: pre;
     }
   }
+}
+
+// =================WAIT SECTION==================
+
+.wait,
+.traineeship {
+  display: flex;
+  flex-direction: column;
+  width: 1068px;
+  margin-left: 137px;
+  margin-bottom: 68px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &_text {
+      font-family: 'Montserrat';
+      font-size: var(--h1_desktop);
+      line-height: var(--h1_desktop_lineHeight);
+      color: var(--blue);
+    }
+
+    &_arrows {
+      display: flex;
+      gap: 37px;
+      margin-right: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+// =================SWIPER SECTION==================
+
+.swiper {
+  width: 1188px;
+  margin-left: 263px;
+  overflow-x: hidden;
+  margin-bottom: 100px;
+}
+
+.wait__cards,
+.traineeship__cards {
+  display: flex;
+  gap: 53px;
+  width: fit-content;
+  overflow-x: hidden;
+}
+
+.wait__card,
+.traineeship__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 328px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 15px;
+  height: 356px;
+  border: 1px solid var(--black);
+  box-shadow: 10px 10px var(--black);
+  margin-bottom: 35px;
+  padding: 16px;
+
+  > h3 {
+    font-family: 'Montserrat';
+    font-size: var(--h3_desktop);
+    font-weight: 500;
+    line-height: var(--h3_desktop_lineHeight);
+    color: var(--blue);
+  }
+}
+
+// =================BEGIN SECTION==================
+
+.begin {
+  height: 296px;
+  width: 1440px;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 51px;
+  margin-left: 13px;
+  margin-bottom: 130px;
+
+  &__header {
+    font-family: 'Montserrat';
+    font-size: var(--h1_desktop);
+    line-height: var(--h1_desktop_lineHeight);
+    color: var(--white);
+    margin-top: 63px;
+  }
+
+  &__button {
+    padding: 9px 16px 10px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+
+// =================TRAINEESHIP SECTION==================
+
+.traineeship {
+  margin-left: 139px;
 }
