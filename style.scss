@@ -10,12 +10,14 @@
   --lead_desktop: 32px;
   --p1_desktop: 18px;
   --p1_desktop_strong: 16px;
+  --p2_desktop: 14px;
   --h3_desktop: 24px;
 
   --h1_desktop_lineHeight: 122%;
   --lead_desktop_lineHeight: 126%;
   --p1_desktop_lineHeight: 112%;
   --p1_desktop_strong_lineHeight: 126%;
+  --p2_desktop_lineHeight: 116%;
   --h3_desktop_lineHeight: 132%;
 }
 
@@ -85,7 +87,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-left: 12px;
   margin-bottom: 129px;
 
   &__image {
@@ -121,7 +122,6 @@ main {
 // =================HERO SECTION==================
 
 .hero {
-  margin-left: 15px;
   margin-bottom: 192px;
   max-width: 936px;
   display: flex;
@@ -175,7 +175,7 @@ main {
   justify-content: space-between;
   font-size: var(--lead_desktop);
   line-height: var(--lead_desktop_lineHeight);
-  margin-left: 12px;
+
   margin-bottom: 190px;
 
   &__trapezoid {
@@ -192,7 +192,6 @@ main {
   flex-direction: column;
   gap: 50px;
   max-width: 936px;
-  margin-left: 12px;
   margin-bottom: 190px;
 
   &__header {
@@ -222,7 +221,8 @@ main {
 // =================WAIT SECTION==================
 
 .wait,
-.traineeship {
+.traineeship,
+.useful {
   display: flex;
   flex-direction: column;
   width: 1068px;
@@ -243,7 +243,7 @@ main {
     &_arrows {
       display: flex;
       gap: 37px;
-      margin-right: 8px;
+      margin-right: 12px;
       margin-top: 20px;
       cursor: pointer;
     }
@@ -254,13 +254,13 @@ main {
 
 .swiper {
   width: 1188px;
-  margin-left: 263px;
+  margin-left: 253px;
   overflow-x: hidden;
   margin-bottom: 100px;
 }
 
 .wait__cards,
-.traineeship__cards {
+.useful__cards {
   display: flex;
   gap: 53px;
   width: fit-content;
@@ -268,7 +268,7 @@ main {
 }
 
 .wait__card,
-.traineeship__card {
+.useful__card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -288,6 +288,7 @@ main {
     font-weight: 500;
     line-height: var(--h3_desktop_lineHeight);
     color: var(--blue);
+    user-select: none;
   }
 }
 
@@ -301,7 +302,6 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 51px;
-  margin-left: 13px;
   margin-bottom: 130px;
 
   &__header {
@@ -324,5 +324,203 @@ main {
 // =================TRAINEESHIP SECTION==================
 
 .traineeship {
-  margin-left: 139px;
+  margin-left: 130px;
+
+  &__header {
+    margin-bottom: 48px;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 5000px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -9px;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 49px;
+    user-select: none;
+  }
+
+  &__line {
+    margin-top: 8px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 37px;
+
+    padding-right: 120px;
+
+    &_header {
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: var(--h3_desktop);
+      line-height: var(--h3_desktop_lineHeight);
+      color: var(--blue);
+    }
+  }
+
+  &__image {
+    margin-right: 250px;
+    margin-top: 5px;
+  }
+
+  &__nextStage {
+    @include button;
+    margin-top: 66px;
+    width: 210px;
+    cursor: pointer;
+  }
+
+  &__swiper {
+    margin-bottom: 190px;
+  }
+}
+
+// =================USEFUL SECTION==================
+
+.useful {
+  &__card {
+    > h3 {
+      color: var(--black);
+    }
+
+    > p {
+      font-size: var(--p2_desktop);
+      line-height: var(--p2_desktop_lineHeight);
+      padding-right: 7px;
+    }
+
+    &_blue {
+      height: 115px;
+      width: 111%;
+      transform: translate(-16px, -16px);
+      background-color: var(--blue);
+      margin-bottom: -14px;
+    }
+    &_blue + h3 {
+      padding-right: 10px;
+    }
+
+    &_black {
+      height: 179px;
+      width: 111%;
+      background-color: var(--black);
+      transform: translate(-16px, -16px);
+      margin-bottom: -14px;
+    }
+  }
+}
+
+// =================INVITE SECTION==================
+
+.invite {
+  width: 1440px;
+  height: 720px;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    font-family: 'Montserrat';
+    font-size: var(--h1_desktop);
+    line-height: var(--h1_desktop_lineHeight);
+    color: var(--white);
+    margin-top: 62px;
+    margin-bottom: 69px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 52px;
+    color: var(--white);
+    width: 456px;
+
+    > label {
+      position: relative;
+      cursor: pointer;
+    }
+
+    > label > input[type='text'],
+    input[type='tel'],
+    input[type='email'] {
+      all: unset;
+      cursor: text;
+      width: 456px;
+
+      &::placeholder {
+        color: var(--white);
+        opacity: 0.5;
+        font-size: var(--p1_desktop);
+        line-height: var(--p1_desktop_lineHeight);
+      }
+    }
+
+    > label > input[type='checkbox'] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  }
+  &__line {
+    width: 456px;
+    height: 1px;
+    background-color: var(--white);
+    margin-top: -48px;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &__checkbox {
+    padding-left: 30px;
+    margin-top: -5px;
+
+    &:hover input ~ .invite__checkmark {
+      cursor: pointer;
+      filter: brightness(0.95);
+    }
+
+    > input:checked ~ .invite__checkmark:after {
+      display: block;
+    }
+
+    > .invite__checkmark::after {
+      left: 6px;
+      top: 2px;
+      width: 7px;
+      height: 12px;
+      border: solid var(--white);
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
 }

@@ -7,11 +7,13 @@
   --lead_desktop: 32px;
   --p1_desktop: 18px;
   --p1_desktop_strong: 16px;
+  --p2_desktop: 14px;
   --h3_desktop: 24px;
   --h1_desktop_lineHeight: 122%;
   --lead_desktop_lineHeight: 126%;
   --p1_desktop_lineHeight: 112%;
   --p1_desktop_strong_lineHeight: 126%;
+  --p2_desktop_lineHeight: 116%;
   --h3_desktop_lineHeight: 132%;
 }
 
@@ -65,7 +67,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  margin-left: 12px;
   margin-bottom: 129px;
 }
 .header__image {
@@ -99,7 +100,6 @@ main {
 }
 
 .hero {
-  margin-left: 15px;
   margin-bottom: 192px;
   max-width: 936px;
   display: flex;
@@ -150,7 +150,6 @@ main {
   justify-content: space-between;
   font-size: var(--lead_desktop);
   line-height: var(--lead_desktop_lineHeight);
-  margin-left: 12px;
   margin-bottom: 190px;
 }
 .description__trapezoid {
@@ -164,7 +163,6 @@ main {
   flex-direction: column;
   gap: 50px;
   max-width: 936px;
-  margin-left: 12px;
   margin-bottom: 190px;
 }
 .offer__header {
@@ -189,7 +187,8 @@ main {
 }
 
 .wait,
-.traineeship {
+.traineeship,
+.useful {
   display: flex;
   flex-direction: column;
   width: 1068px;
@@ -197,35 +196,38 @@ main {
   margin-bottom: 68px;
 }
 .wait__header,
-.traineeship__header {
+.traineeship__header,
+.useful__header {
   display: flex;
   justify-content: space-between;
 }
 .wait__header_text,
-.traineeship__header_text {
+.traineeship__header_text,
+.useful__header_text {
   font-family: "Montserrat";
   font-size: var(--h1_desktop);
   line-height: var(--h1_desktop_lineHeight);
   color: var(--blue);
 }
 .wait__header_arrows,
-.traineeship__header_arrows {
+.traineeship__header_arrows,
+.useful__header_arrows {
   display: flex;
   gap: 37px;
-  margin-right: 8px;
+  margin-right: 12px;
   margin-top: 20px;
   cursor: pointer;
 }
 
 .swiper {
   width: 1188px;
-  margin-left: 263px;
+  margin-left: 253px;
   overflow-x: hidden;
   margin-bottom: 100px;
 }
 
 .wait__cards,
-.traineeship__cards {
+.useful__cards {
   display: flex;
   gap: 53px;
   width: fit-content;
@@ -233,7 +235,7 @@ main {
 }
 
 .wait__card,
-.traineeship__card {
+.useful__card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -248,12 +250,13 @@ main {
   padding: 16px;
 }
 .wait__card > h3,
-.traineeship__card > h3 {
+.useful__card > h3 {
   font-family: "Montserrat";
   font-size: var(--h3_desktop);
   font-weight: 500;
   line-height: var(--h3_desktop_lineHeight);
   color: var(--blue);
+  user-select: none;
 }
 
 .begin {
@@ -264,7 +267,6 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 51px;
-  margin-left: 13px;
   margin-bottom: 130px;
 }
 .begin__header {
@@ -283,7 +285,178 @@ main {
 }
 
 .traineeship {
-  margin-left: 139px;
+  margin-left: 130px;
+}
+.traineeship__header {
+  margin-bottom: 48px;
+}
+.traineeship__wrapper {
+  display: flex;
+  width: 5000px;
+}
+.traineeship__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -9px;
+}
+.traineeship__tabs {
+  display: flex;
+  gap: 49px;
+  user-select: none;
+}
+.traineeship__line {
+  margin-top: 8px;
+}
+.traineeship__text {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-top: 37px;
+  padding-right: 120px;
+}
+.traineeship__text_header {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: var(--h3_desktop);
+  line-height: var(--h3_desktop_lineHeight);
+  color: var(--blue);
+}
+.traineeship__image {
+  margin-right: 250px;
+  margin-top: 5px;
+}
+.traineeship__nextStage {
+  width: 220px;
+  padding: 10px 16px 9px 16px;
+  border: 1px solid var(--black);
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 66px;
+  width: 210px;
+  cursor: pointer;
+}
+.traineeship__swiper {
+  margin-bottom: 190px;
+}
+
+.useful__card > h3 {
+  color: var(--black);
+}
+.useful__card > p {
+  font-size: var(--p2_desktop);
+  line-height: var(--p2_desktop_lineHeight);
+  padding-right: 7px;
+}
+.useful__card_blue {
+  height: 115px;
+  width: 111%;
+  transform: translate(-16px, -16px);
+  background-color: var(--blue);
+  margin-bottom: -14px;
+}
+.useful__card_blue + h3 {
+  padding-right: 10px;
+}
+.useful__card_black {
+  height: 179px;
+  width: 111%;
+  background-color: var(--black);
+  transform: translate(-16px, -16px);
+  margin-bottom: -14px;
+}
+
+.invite {
+  width: 1440px;
+  height: 720px;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invite__header {
+  font-family: "Montserrat";
+  font-size: var(--h1_desktop);
+  line-height: var(--h1_desktop_lineHeight);
+  color: var(--white);
+  margin-top: 62px;
+  margin-bottom: 69px;
+}
+.invite__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 52px;
+  color: var(--white);
+  width: 456px;
+}
+.invite__form > label {
+  position: relative;
+  cursor: pointer;
+}
+.invite__form > label > input[type=text],
+.invite__form input[type=tel],
+.invite__form input[type=email] {
+  all: unset;
+  cursor: text;
+  width: 456px;
+}
+.invite__form > label > input[type=text]::placeholder,
+.invite__form input[type=tel]::placeholder,
+.invite__form input[type=email]::placeholder {
+  color: var(--white);
+  opacity: 0.5;
+  font-size: var(--p1_desktop);
+  line-height: var(--p1_desktop_lineHeight);
+}
+.invite__form > label > input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.invite__line {
+  width: 456px;
+  height: 1px;
+  background-color: var(--white);
+  margin-top: -48px;
+}
+.invite__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+}
+.invite__checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.invite__checkbox {
+  padding-left: 30px;
+  margin-top: -5px;
+}
+.invite__checkbox:hover input ~ .invite__checkmark {
+  cursor: pointer;
+  filter: brightness(0.95);
+}
+.invite__checkbox > input:checked ~ .invite__checkmark:after {
+  display: block;
+}
+.invite__checkbox > .invite__checkmark::after {
+  left: 6px;
+  top: 2px;
+  width: 7px;
+  height: 12px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=style.css.map */
