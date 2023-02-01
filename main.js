@@ -144,10 +144,18 @@ leftArrow2.style.opacity = '0.25';
 leftArrow3.style.opacity = '0.25';
 
 const swiper1 = new Swiper('.swiper1', {
-  slidesPerView: 3,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+    },
+
+    768: {
+      slidesPerView: 2,
+    },
   },
 });
 
@@ -226,5 +234,51 @@ buttons_targets.forEach((el) => {
   const [button, target] = el;
   button.addEventListener('click', () => {
     target.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      if (window.innerWidth < 1200) {
+        closeMenu();
+      }
+    }, 300);
   });
 });
+
+// HAMBURGER CODE
+
+const openBurgerIcon = document.querySelector('.header__hamburger_open');
+const closeBurgerIcon = document.querySelector('.header__hamburger_close');
+const headerLinks = document.querySelector('.header__links');
+const headerSubmit = document.querySelector('.header__submit');
+const heroSection = document.querySelector('.hero');
+
+function openMenu() {
+  openBurgerIcon.style.display = 'none';
+  closeBurgerIcon.style.display = 'block';
+  headerLinks.style.display = 'flex';
+  headerSubmit.style.display = 'flex';
+  heroSection.style.visibility = 'hidden';
+}
+
+function closeMenu() {
+  openBurgerIcon.style.display = 'block';
+  closeBurgerIcon.style.display = 'none';
+  headerLinks.style.display = 'none';
+  headerSubmit.style.display = 'none';
+  heroSection.style.visibility = 'visible';
+}
+
+function resetOnResize() {
+  if (window.innerWidth > 1200) {
+    headerLinks.style.display = 'flex';
+    openBurgerIcon.style.display = 'none';
+    closeBurgerIcon.style.display = 'none';
+    headerSubmit.style.display = 'flex';
+    heroSection.style.visibility = 'visible';
+  }
+  if (window.innerWidth < 1200) {
+    closeMenu();
+  }
+}
+
+openBurgerIcon.addEventListener('click', openMenu);
+closeBurgerIcon.addEventListener('click', closeMenu);
+window.addEventListener('resize', resetOnResize);
