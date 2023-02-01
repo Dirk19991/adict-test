@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script type="module" defer src="main.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -13,10 +14,10 @@
         <img src="./assets/Logotype.svg" alt="logo" />
       </div>
       <div class="header__item header__links">
-        <div>Кто мы</div>
-        <div>Что мы предлагаем</div>
-        <div>Этапы</div>
-        <div>Полезные статьи</div>
+        <div class="header__who">Кто мы</div>
+        <div class="header__offer">Что мы предлагаем</div>
+        <div class="header__stages">Этапы</div>
+        <div class="header__articles">Полезные статьи</div>
       </div>
       <div class="header__item header__submit">
         Оставить заявку
@@ -39,7 +40,7 @@
       </section>
 
       <section class="description">
-        <p>
+        <p id="whoButtonTarget">
           Мы — агентство Адикт. Сильны в сложной разработке, любим дизайн и
           брендинг, делаем хорошую интернет-рекламу.
         </p>
@@ -55,7 +56,9 @@
         </div>
       </section>
       <section class="offer">
-        <div class="offer__header">{ Что предлагаем? }</div>
+        <div id="offerButtonTarget" class="offer__header">
+          { Что предлагаем? }
+        </div>
         <div class="offer__description">
           <p>
             В рамках стажировки вы изучите основы коммерческой разработки на
@@ -158,7 +161,9 @@
       </section>
       <section class="traineeship">
         <div class="traineeship__header">
-          <div class="traineeship__header_text">{ Этапы стажировки }</div>
+          <div id="stagesButtonTarget" class="traineeship__header_text">
+            { Этапы стажировки }
+          </div>
           <div class="traineeship__header_arrows">
             <div class="traineeship__header_arrow swiper-button-prev2">
               <svg
@@ -279,7 +284,9 @@
 
       <section class="useful">
         <div class="useful__header">
-          <div class="useful__header_text">{ Полезные статьи }</div>
+          <div id="articlesButtonTarget" class="useful__header_text">
+            { Полезные статьи }
+          </div>
           <div class="useful__header_arrows">
             <div class="useful__header_arrow swiper-button-prev3">
               <svg
@@ -358,31 +365,69 @@
       </section>
 
       <section class="invite">
-        <div class="invite__header">{ Давай к нам! }</div>
+        <div id="submitButtonTarget" class="invite__header">
+          { Давай к нам! }
+        </div>
         <form class="invite__form" action="#">
           <label>
-            <input type="text" name="name" placeholder="Имя" />
+            <input id="inviteName" type="text" name="name" placeholder="Имя" />
           </label>
-          <div class="invite__line"></div>
+          <div id="inviteNameLine" class="invite__line"></div>
           <label>
-            <input type="email" name="email" placeholder="Email" />
+            <input
+              id="inviteEmail"
+              type="text"
+              name="email"
+              placeholder="Email"
+            />
           </label>
-          <div class="invite__line"></div>
+          <div id="inviteEmailLine" class="invite__line"></div>
           <label>
-            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" />
+            <input
+              id="invitePhone"
+              type="tel"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+            />
           </label>
-          <div class="invite__line"></div>
+          <div id="invitePhoneLine" class="invite__line"></div>
           <label>
-            <input type="text" name="personal" placeholder="О себе" />
+            <input
+              id="invitePersonal"
+              type="text"
+              name="personal"
+              placeholder="О себе"
+            />
           </label>
-          <div class="invite__line"></div>
+          <div id="invitePersonalLine" class="invite__line"></div>
           <label class="invite__checkbox">
-            <input class="invite__input" type="checkbox" />
+            <input id="inviteCheckbox" class="invite__input" type="checkbox" />
             <span class="invite__checkmark"></span>
-            Я согласен с политикой обработки персональных данных
+            Я согласен с
+            <span class="invite_underline"
+              >политикой обработки персональных данных</span
+            >
           </label>
+          <input
+            id="inviteSubmit"
+            class="invite__button"
+            type="submit"
+            value="Отправить"
+          />
         </form>
       </section>
+      <section class="thanks">
+        <div class="thanks__header">{ Спасибо! }</div>
+        <div class="thanks__text">
+          Твоя заявка уже на нашей почте, скоро мы её проверим и ответим тебе
+        </div>
+        <div class="thanks__button">Круто!</div>
+      </section>
+      <div class="fullscreen-line"></div>
     </main>
+    <footer class="footer">
+      <div>© 2021 ООО «АДИКТ»</div>
+      <div class="footer_underline">Политика конфиденциальности</div>
+    </footer>
   </body>
 </html>

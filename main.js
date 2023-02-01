@@ -1,5 +1,98 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
 
+// VALIDATION CODE
+
+const inviteForm = document.querySelector('.invite__form');
+const inviteName = document.querySelector('#inviteName');
+const inviteEmail = document.querySelector('#inviteEmail');
+const invitePhone = document.querySelector('#invitePhone');
+const invitePersonal = document.querySelector('#invitePersonal');
+const inviteCheckbox = document.querySelector('#inviteCheckbox');
+const inviteSubmit = document.querySelector('#inviteSubmit');
+
+const inviteNameLine = document.querySelector('#inviteNameLine');
+const inviteEmailLine = document.querySelector('#inviteEmailLine');
+const invitePhoneLine = document.querySelector('#invitePhoneLine');
+const invitePersonalLine = document.querySelector('#invitePersonalLine');
+
+const inputs_lines = [
+  [inviteName, inviteNameLine, 'isAlpha'],
+  [inviteEmail, inviteEmailLine, 'isEmail'],
+  [invitePhone, invitePhoneLine, 'isMobilePhone'],
+  [invitePersonal, invitePersonalLine, 'isAlpha'],
+];
+
+function validate(el) {
+  const [name, line, option] = el;
+
+  if (!name.value) return;
+
+  function setMessage() {
+    line.style.backgroundColor = 'red';
+    line.insertAdjacentHTML(
+      'beforeend',
+      `<div class='warning' style='color:red; position:absolute; margin-top: 3px; font-size: 14px'>Неправильный формат</div`
+    );
+  }
+
+  if (option === 'isAlpha') {
+    if (!validator[option](name.value, ['ru-RU'])) {
+      setMessage();
+    }
+  } else {
+    if (!validator[option](name.value)) {
+      setMessage();
+    }
+  }
+}
+
+function validateCheckbox(el) {
+  if (!el.checked) {
+    document
+      .querySelector('.invite__checkbox')
+      .insertAdjacentHTML(
+        'beforeEnd',
+        `<div class='warning' style='color:red; position:absolute; margin-top: 3px; font-size: 14px'>Требуется ваше согласие</div`
+      );
+  }
+}
+
+function makeLineRed(el, line) {
+  if (!el.value) {
+    line.style.backgroundColor = 'red';
+    line.insertAdjacentHTML(
+      'beforeend',
+      `<div class='warning' style='color:red; position:absolute; margin-top: 3px; font-size: 14px'>Вы не заполнили поле</div`
+    );
+  }
+}
+
+function makeLineWhite(line) {
+  line.style.backgroundColor = 'white';
+}
+
+inviteForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  document.querySelectorAll('.warning').forEach((el) => el.remove());
+  inputs_lines.forEach((el) => makeLineWhite(el[1]));
+  inputs_lines.forEach((el) => makeLineRed(el[0], el[1]));
+  inputs_lines.forEach((el) => validate(el));
+  validateCheckbox(inviteCheckbox);
+
+  if (document.querySelectorAll('.warning').length === 0) {
+    document.querySelector('.invite').style.display = 'none';
+    document.querySelector('.thanks').style.display = 'flex';
+    document.querySelector('.thanks__button').addEventListener('click', () => {
+      document.querySelector('.invite').style.display = 'flex';
+      document.querySelector('.thanks').style.display = 'none';
+      inputs_lines.forEach((el) => (el[0].value = ''));
+      inviteCheckbox.checked = false;
+    });
+  }
+});
+
+// SWIPERS CODE
+
 const slides1 = document.querySelectorAll('.swiper-slide1');
 const leftArrow1 = document.querySelector('.left_arrow1');
 const rightArrow1 = document.querySelector('.right_arrow1');
@@ -101,3 +194,37 @@ swiper2.on('slideChange', () => {
 swiper3.on('slideChange', () =>
   shadowArrow(swiper3, leftArrow3, rightArrow3, slides3, 3)
 );
+
+// NAVIGATION CODE
+
+const whoButton = document.querySelector('.header__who');
+const offerButton = document.querySelector('.header__offer');
+const stagesButton = document.querySelector('.header__stages');
+const articlesButton = document.querySelector('.header__articles');
+const submitButton = document.querySelector('.header__submit');
+const submitButton2 = document.querySelector('.hero__frontend_submit');
+const letsgoButton = document.querySelector('.begin__button');
+
+const whoButtonTarget = document.querySelector('#whoButtonTarget');
+const offerButtonTarget = document.querySelector('#offerButtonTarget');
+const stagesButtonTarget = document.querySelector('#stagesButtonTarget');
+const articlesButtonTarget = document.querySelector('#articlesButtonTarget');
+const submitButtonTarget = document.querySelector('#submitButtonTarget');
+const letsgoButtonTarget = document.querySelector('#submitButtonTarget');
+
+const buttons_targets = [
+  [whoButton, whoButtonTarget],
+  [offerButton, offerButtonTarget],
+  [stagesButton, stagesButtonTarget],
+  [articlesButton, articlesButtonTarget],
+  [submitButton, submitButtonTarget],
+  [submitButton2, submitButtonTarget],
+  [letsgoButton, letsgoButtonTarget],
+];
+
+buttons_targets.forEach((el) => {
+  const [button, target] = el;
+  button.addEventListener('click', () => {
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
