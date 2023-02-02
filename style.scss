@@ -968,8 +968,8 @@ main {
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 320px !important;
-    margin-left: -10px;
+    width: 320px;
+    margin-left: 10px;
     height: 600px;
   }
 

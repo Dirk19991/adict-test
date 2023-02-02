@@ -994,8 +994,8 @@ main {
 }
 @media (max-width: 768px) {
   .invite {
-    width: 320px !important;
-    margin-left: -10px;
+    width: 320px;
+    margin-left: 10px;
     height: 600px;
   }
 }
