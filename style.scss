@@ -254,7 +254,7 @@ button {
       line-height: var(--p1_tablet_lineHeight);
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       left: 12px;
     }
   }
@@ -274,7 +274,7 @@ button {
       left: 121px;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       left: 12px;
     }
   }
@@ -848,7 +848,7 @@ main {
       margin-top: -50px;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       transform: translate(-5px) scale(0.64);
       margin-top: -65px;
     }
@@ -866,7 +866,7 @@ main {
       margin-top: 53px;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       margin-top: 13px;
       margin-left: 5px;
     }
@@ -879,7 +879,7 @@ main {
       margin-bottom: 100px;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       margin-bottom: 0px;
     }
   }
@@ -1168,6 +1168,10 @@ main {
   width: 1440px;
   height: 1px;
   background-color: var(--white);
+
+  @media (max-width: 768px) {
+    width: 200px;
+  }
 }
 
 .footer {
