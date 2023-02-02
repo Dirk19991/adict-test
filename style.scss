@@ -1001,7 +1001,7 @@ main {
     width: 456px;
 
     @media (max-width: 768px) {
-      width: 320px;
+      width: 320px !important;
       padding-left: 30px;
     }
 
