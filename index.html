@@ -442,7 +442,13 @@
         </div>
         <form class="invite__form" action="#">
           <label>
-            <input id="inviteName" type="text" name="name" placeholder="Имя" />
+            <input
+              id="inviteName"
+              type="text"
+              name="name"
+              placeholder="Имя"
+              autocomplete="off"
+            />
           </label>
           <div id="inviteNameLine" class="invite__line"></div>
           <label>
@@ -451,6 +457,7 @@
               type="text"
               name="email"
               placeholder="Email"
+              autocomplete="off"
             />
           </label>
           <div id="inviteEmailLine" class="invite__line"></div>
@@ -460,6 +467,7 @@
               type="tel"
               name="phone"
               placeholder="+7 (___) ___-__-__"
+              autocomplete="off"
             />
           </label>
           <div id="invitePhoneLine" class="invite__line"></div>
@@ -469,6 +477,7 @@
               type="text"
               name="personal"
               placeholder="О себе"
+              autocomplete="off"
             />
           </label>
           <div id="invitePersonalLine" class="invite__line"></div>
