@@ -2,17 +2,24 @@
   "name": "adict-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build --dist-dir build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.21",
+    "postcss-modules": "^4.3.1",
     "sass": "^1.57.1"
   },
   "dependencies": {
     "swiper": "^8.4.7",
     "validator": "^13.7.0"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }

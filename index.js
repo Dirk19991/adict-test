@@ -1,5 +1,3 @@
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
-
 // VALIDATION CODE
 
 const inviteForm = document.querySelector('.invite__form');
