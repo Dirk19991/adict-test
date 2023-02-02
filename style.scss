@@ -292,10 +292,6 @@ main {
   @media (max-width: 1200px) {
     overflow: hidden;
   }
-
-  @media (max-width: 768px) {
-    overflow: visible;
-  }
 }
 
 // =================HERO SECTION==================
@@ -975,6 +971,7 @@ main {
     width: 320px;
     margin-left: -10px;
     height: 600px;
+    overflow: visible;
   }
 
   &__header {

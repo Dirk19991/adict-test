@@ -289,11 +289,6 @@ main {
     overflow: hidden;
   }
 }
-@media (max-width: 768px) {
-  main {
-    overflow: visible;
-  }
-}
 
 .hero {
   margin-bottom: 192px;
@@ -1002,6 +997,7 @@ main {
     width: 320px;
     margin-left: -10px;
     height: 600px;
+    overflow: visible;
   }
 }
 .invite__header {
