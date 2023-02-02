@@ -292,6 +292,10 @@ main {
   @media (max-width: 1200px) {
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    overflow: visible;
+  }
 }
 
 // =================HERO SECTION==================
@@ -969,7 +973,7 @@ main {
 
   @media (max-width: 768px) {
     width: 320px;
-    margin-left: 10px;
+    margin-left: -10px;
     height: 600px;
   }
 
