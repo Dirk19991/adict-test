@@ -1,11 +1,12 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="module" defer src="main.js"></script>
+    <script type="module" src="index.js"></script>
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
   </head>
   <body>
@@ -19,10 +20,21 @@
         <div class="header__stages">Этапы</div>
         <div class="header__articles">Полезные статьи</div>
       </div>
-      <div class="header__item header__submit">
+      <button class="header__item header__submit">
         Оставить заявку
-        <img src="./assets/Arrow.svg" alt="arrow" />
-      </div>
+        <svg
+          width="16"
+          height="17"
+          viewBox="0 0 16 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 3.5L8.285 4.1965L12.075 8H2V9H12.075L8.285 12.7865L9 13.5L14 8.5L9 3.5Z"
+            fill="#00151C"
+          />
+        </svg>
+      </button>
       <div class="header__hamburger">
         <img
           class="header__hamburger_open"
@@ -42,10 +54,21 @@
         <div class="hero__frontend">
           <div class="hero__frontend_blue">Фронтенд,</div>
           <div class="hero__frontend_black">лето, юность</div>
-          <div class="hero__frontend_submit">
+          <button class="hero__frontend_submit">
             Оставить заявку
-            <img src="./assets/WhiteArrow.svg" alt="arrow" />
-          </div>
+            <svg
+              width="16"
+              height="17"
+              viewBox="0 0 16 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 3.5L8.285 4.1965L12.075 8H2V9H12.075L8.285 12.7865L9 13.5L14 8.5L9 3.5Z"
+                fill="white"
+              />
+            </svg>
+          </button>
         </div>
         <div class="hero__icons">
           <img src="./assets/Icons.svg" alt="icons" />
@@ -55,7 +78,7 @@
       <section class="description">
         <p id="whoButtonTarget">
           Мы — агентство Адикт. Сильны в сложной разработке, любим дизайн и
-          брендинг, делаем хорошую интернет-рекламу.
+          брендинг, делаем хорошую интернет&#8209;рекламу.
         </p>
         <p>
           Мы более 9 лет занимаемся комплексной разработкой и поддержкой
@@ -114,7 +137,6 @@
               >
                 <path
                   class="right_arrow1"
-                  id="arrowRight"
                   d="M24.75 8.25L22.7837 10.1654L33.2062 20.625H5.5V23.375H33.2062L22.7837 33.7879L24.75 35.75L38.5 22L24.75 8.25Z"
                   fill="#00151C"
                 />
@@ -172,7 +194,7 @@
       </section>
       <section class="begin">
         <div class="begin__header">{ Начнём? }</div>
-        <div class="begin__button">Поехали!</div>
+        <button class="begin__button">Поехали!</button>
       </section>
       <section class="traineeship">
         <div class="traineeship__header">
@@ -205,7 +227,6 @@
               >
                 <path
                   class="right_arrow2"
-                  id="arrowRight"
                   d="M24.75 8.25L22.7837 10.1654L33.2062 20.625H5.5V23.375H33.2062L22.7837 33.7879L24.75 35.75L38.5 22L24.75 8.25Z"
                   fill="#00151C"
                 />
@@ -220,7 +241,7 @@
           </div>
           <div class="traineeship__practice">Изучение новых тем + практика</div>
         </div>
-        <hr class="traineeship__line" />
+        <div class="traineeship__line"></div>
       </section>
 
       <section class="swiper swiper2 traineeship__swiper">
@@ -241,7 +262,19 @@
                 нравилось
               </div>
               <div class="traineeship__nextStage">
-                Следующий этап <img src="./assets/Arrow.svg" alt="arrow" />
+                Следующий этап
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 3.5L8.285 4.1965L12.075 8H2V9H12.075L8.285 12.7865L9 13.5L14 8.5L9 3.5Z"
+                    fill="#00151C"
+                  />
+                </svg>
               </div>
             </div>
             <div class="traineeship__image">
@@ -264,7 +297,19 @@
                 нравилось
               </div>
               <div class="traineeship__nextStage">
-                Следующий этап <img src="./assets/Arrow.svg" alt="arrow" />
+                Следующий этап
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 3.5L8.285 4.1965L12.075 8H2V9H12.075L8.285 12.7865L9 13.5L14 8.5L9 3.5Z"
+                    fill="#00151C"
+                  />
+                </svg>
               </div>
             </div>
             <div class="traineeship__image">
@@ -287,7 +332,19 @@
                 нравилось
               </div>
               <div class="traineeship__nextStage">
-                Следующий этап <img src="./assets/Arrow.svg" alt="arrow" />
+                Следующий этап
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 3.5L8.285 4.1965L12.075 8H2V9H12.075L8.285 12.7865L9 13.5L14 8.5L9 3.5Z"
+                    fill="#00151C"
+                  />
+                </svg>
               </div>
             </div>
             <div class="traineeship__image">
@@ -328,7 +385,6 @@
               >
                 <path
                   class="right_arrow3"
-                  id="arrowRight"
                   d="M24.75 8.25L22.7837 10.1654L33.2062 20.625H5.5V23.375H33.2062L22.7837 33.7879L24.75 35.75L38.5 22L24.75 8.25Z"
                   fill="#00151C"
                 />

@@ -8,7 +8,6 @@ const inviteEmail = document.querySelector('#inviteEmail');
 const invitePhone = document.querySelector('#invitePhone');
 const invitePersonal = document.querySelector('#invitePersonal');
 const inviteCheckbox = document.querySelector('#inviteCheckbox');
-const inviteSubmit = document.querySelector('#inviteSubmit');
 
 const inviteNameLine = document.querySelector('#inviteNameLine');
 const inviteEmailLine = document.querySelector('#inviteEmailLine');
@@ -113,8 +112,9 @@ const tabs = [interviewTab, qualityTab, practiceTab];
 tabs[0].style.fontWeight = '700';
 tabs[0].style.color = 'var(--blue)';
 tabs[0].style.textDecoration = 'underline var(--blue)';
-tabs[0].style.textUnderlineOffset = '11px';
-tabs[0].style.textDecorationThickness = '3px';
+tabs[0].style.textUnderlineOffset = window.innerWidth > 1200 ? '11px' : '13px';
+tabs[0].style.textDecorationThickness =
+  window.innerWidth > 1200 ? '3px' : '1px';
 tabs[0].style.zIndex = '2';
 
 const nextStageButtons = document.querySelectorAll('.traineeship__nextStage');
@@ -168,10 +168,18 @@ const swiper2 = new Swiper('.swiper2', {
 });
 
 const swiper3 = new Swiper('.swiper3', {
-  slidesPerView: 3,
   navigation: {
     nextEl: '.swiper-button-next3',
     prevEl: '.swiper-button-prev3',
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+    },
+
+    768: {
+      slidesPerView: 2,
+    },
   },
 });
 
@@ -182,6 +190,37 @@ swiper1.on('slideChange', () =>
 swiper2.on('slideChange', () => {
   const activeIndex = swiper2.activeIndex;
 
+  if (
+    activeIndex === 2 &&
+    window.innerWidth < 1200 &&
+    window.innerWidth > 768
+  ) {
+    document.querySelector('.traineeship__tabs').style.transform =
+      'translate(-250px)';
+  }
+
+  if (
+    activeIndex !== 2 &&
+    window.innerWidth < 1200 &&
+    window.innerWidth > 768
+  ) {
+    document.querySelector('.traineeship__tabs').style.transform = '';
+  }
+
+  if (activeIndex === 0 && window.innerWidth < 768) {
+    document.querySelector('.traineeship__tabs').style.transform = '';
+  }
+
+  if (activeIndex === 1 && window.innerWidth < 768) {
+    document.querySelector('.traineeship__tabs').style.transform =
+      'translate(-275px)';
+  }
+
+  if (activeIndex === 2 && window.innerWidth < 768) {
+    document.querySelector('.traineeship__tabs').style.transform =
+      'translate(-660px)';
+  }
+
   tabs.forEach((tab) => {
     tab.style.fontWeight = '500';
     tab.style.color = 'var(--black)';
@@ -190,12 +229,16 @@ swiper2.on('slideChange', () => {
     tab.style.textDecorationThickness = '0px';
     tab.style.zIndex = '0';
   });
+
   tabs[activeIndex].style.fontWeight = '700';
   tabs[activeIndex].style.color = 'var(--blue)';
   tabs[activeIndex].style.textDecoration = 'underline var(--blue)';
-  tabs[activeIndex].style.textUnderlineOffset = '11px';
-  tabs[activeIndex].style.textDecorationThickness = '3px';
+  tabs[activeIndex].style.textUnderlineOffset =
+    window.innerWidth > 1200 ? '11px' : '13px';
+  tabs[activeIndex].style.textDecorationThickness =
+    window.innerWidth > 1200 ? '3px' : '1px';
   tabs[activeIndex].style.zIndex = '2';
+
   shadowArrow(swiper2, leftArrow2, rightArrow2, slides2, 1);
 });
 
@@ -273,6 +316,7 @@ function resetOnResize() {
     closeBurgerIcon.style.display = 'none';
     headerSubmit.style.display = 'flex';
     heroSection.style.visibility = 'visible';
+    document.querySelector('.traineeship__tabs').style.transform = '';
   }
   if (window.innerWidth < 1200) {
     closeMenu();
