@@ -1029,7 +1029,8 @@ main {
 }
 @media (max-width: 768px) {
   .invite__form {
-    width: 290px;
+    width: 320px;
+    padding-left: 30px;
   }
 }
 .invite__form > label {

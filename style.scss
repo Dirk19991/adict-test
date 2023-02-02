@@ -1001,7 +1001,8 @@ main {
     width: 456px;
 
     @media (max-width: 768px) {
-      width: 290px;
+      width: 320px;
+      padding-left: 30px;
     }
 
     > label {
