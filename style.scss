@@ -656,6 +656,12 @@ main {
   }
 }
 
+.useful__card {
+  @media (max-width: 768px) {
+    flex-basis: 248px;
+  }
+}
+
 // =================BEGIN SECTION==================
 
 .begin {

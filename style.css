@@ -684,6 +684,12 @@ main {
   line-height: var(--p1_tablet_lineHeight);
 }
 
+@media (max-width: 768px) {
+  .useful__card {
+    flex-basis: 248px;
+  }
+}
+
 .begin {
   height: 296px;
   width: 1440px;
