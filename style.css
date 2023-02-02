@@ -112,7 +112,7 @@ button {
 .header__submit:hover > svg > path,
 .traineeship__nextStage:hover > svg > path {
   fill: var(--white);
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
 }
 .header__submit:active,
 .traineeship__nextStage:active {
@@ -122,7 +122,7 @@ button {
 .header__submit:active > svg > path,
 .traineeship__nextStage:active > svg > path {
   fill: var(--white);
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
 }
 
 .begin__button,
@@ -250,7 +250,7 @@ button {
   display: flex;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
 }
 @media (max-width: 1200px) {
   .header__submit {
@@ -260,7 +260,7 @@ button {
     display: flex;
     gap: 8px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: color 0.3s, background-color 0.3s, fill 0.3s;
     display: none;
     position: absolute;
     width: 200px;
@@ -356,7 +356,7 @@ main {
   display: flex;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
   background-color: var(--blue);
   border: none;
   color: var(--white);
@@ -657,7 +657,7 @@ main {
 @media (max-width: 768px) {
   .wait__card,
   .useful__card {
-    flex-basis: 248px;
+    flex-basis: 278px;
     padding: 16px 20px;
     box-shadow: 7px 7px var(--black);
   }
@@ -881,7 +881,7 @@ main {
   display: flex;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
   margin-top: 66px;
   width: 210px;
   cursor: pointer;
@@ -1122,7 +1122,7 @@ main {
   display: flex;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
   width: fit-content;
   border: 1px solid var(--white);
   margin-top: 10px;
@@ -1184,7 +1184,7 @@ main {
   display: flex;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
   width: fit-content;
   border: 1px solid var(--white);
 }

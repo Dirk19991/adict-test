@@ -48,7 +48,7 @@
   display: flex;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: color 0.3s, background-color 0.3s, fill 0.3s;
 }
 
 @font-face {
@@ -132,7 +132,7 @@ button {
 
     > svg > path {
       fill: var(--white);
-      transition: all 0.3s;
+      transition: color 0.3s, background-color 0.3s, fill 0.3s;
     }
   }
 
@@ -142,7 +142,7 @@ button {
 
     > svg > path {
       fill: var(--white);
-      transition: all 0.3s;
+      transition: color 0.3s, background-color 0.3s, fill 0.3s;
     }
   }
 }
@@ -631,7 +631,7 @@ main {
   padding: 16px;
 
   @media (max-width: 768px) {
-    flex-basis: 248px;
+    flex-basis: 278px;
     padding: 16px 20px;
     box-shadow: 7px 7px var(--black);
   }
