@@ -157,6 +157,7 @@ button {
   align-items: center;
   position: relative;
   margin-bottom: 129px;
+  margin-left: 8px;
 }
 @media (max-width: 1200px) {
   .header {
@@ -170,7 +171,7 @@ button {
   .header {
     min-width: 320px;
     width: 320px;
-    margin-left: 10px;
+    margin-left: 30px;
   }
 }
 .header__hamburger {
@@ -289,21 +290,25 @@ main {
     overflow: hidden;
   }
 }
+@media (max-width: 768px) {
+  main {
+    margin-left: 15px;
+  }
+}
 
 .hero {
   margin-bottom: 192px;
   max-width: 936px;
   display: flex;
   justify-content: space-between;
-  gap: 118px;
+  gap: 123px;
 }
 @media (max-width: 1200px) {
   .hero {
     margin-top: 96px;
     margin-left: 15px;
     gap: 57px;
-    margin-bottom: 125px;
-    margin-right: 9px;
+    margin-bottom: 120px;
   }
 }
 @media (max-width: 768px) {
@@ -402,6 +407,7 @@ main {
   font-size: var(--lead_desktop);
   line-height: var(--lead_desktop_lineHeight);
   margin-bottom: 190px;
+  margin-left: 5px;
 }
 @media (max-width: 1200px) {
   .description {
@@ -432,7 +438,8 @@ main {
   flex-direction: column;
   gap: 50px;
   max-width: 936px;
-  margin-bottom: 190px;
+  margin-bottom: 194px;
+  margin-left: 7px;
 }
 @media (max-width: 1200px) {
   .offer {
@@ -697,8 +704,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 51px;
-  margin-bottom: 130px;
+  gap: 48px;
+  margin-bottom: 124px;
 }
 @media (max-width: 1200px) {
   .begin {
@@ -840,7 +847,7 @@ main {
   .traineeship__text {
     font-size: var(--p1_tablet);
     line-height: var(--p1_tablet_lineHeight);
-    margin-top: 12px;
+    margin-top: 2px;
     padding-right: 130px;
   }
 }
@@ -888,7 +895,7 @@ main {
   gap: 8px;
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s, fill 0.3s;
-  margin-top: 66px;
+  margin-top: 58px;
   width: 210px;
   cursor: pointer;
 }
@@ -992,8 +999,14 @@ main {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 1200px) {
+  .invite {
+    margin-top: -15px;
+  }
+}
 @media (max-width: 768px) {
   .invite {
+    margin-top: 0;
     width: 320px;
     margin-left: -10px;
     height: 600px;
@@ -1006,7 +1019,7 @@ main {
   line-height: var(--h1_desktop_lineHeight);
   color: var(--white);
   margin-top: 62px;
-  margin-bottom: 69px;
+  margin-bottom: 65px;
 }
 @media (max-width: 1200px) {
   .invite__header {
@@ -1233,7 +1246,7 @@ main {
     height: 122px;
     width: 320px;
     gap: 15px;
-    margin-left: -10px;
+    margin-left: 5px;
   }
 }
 .footer_underline {
